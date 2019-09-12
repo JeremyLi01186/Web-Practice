@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Ensures proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Forces IE 8/9/10 to use its latest rendering engine -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>To-Do List</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="index3.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List<i class="fa fa-plus"></i></h1>
+      <input type="text" placeholder="Add new">
+      <!-- Class 'sortable' enables sorting with jQuery UI method .sortable() -->
+      <ul class="sortable">
+        <li><span><i class="fa fa-trash"></i></span>Work on projects for one hour</li>
+        <li><span><i class="fa fa-trash"></i></span>Go for a walk</li>
+        <li><span><i class="fa fa-trash"></i></span>Meditate</li>
+        <li><span><i class="fa fa-trash"></i></span>Stretch</li>
+      </ul>
+    </div>
+  </body>
+</html>
