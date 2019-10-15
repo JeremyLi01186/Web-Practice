@@ -1,0 +1,71 @@
+<html lang="en-US">
+	<head>
+		<title>Baby names</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function() {
+				for(y=2005;y<=2015;++y) $('select#year').append('<option>'+y+'</option>');
+				
+				$('button#search').click(function() {
+					$("#result").empty();
+                    $.ajax({
+                        type: "GET",
+                        url: "babynames.php?year="+$('select#year').val()+"&gender="+$('select#gender').val(),
+                        success: function (data) {
+                            $('table#result').append(data);
+                        }
+                    });
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Baby names</h1>
+		<span>Year</span>
+		<select id="year" name="year">
+			<option>ALL</option>
+		</select>
+		<span>Gender</span>
+		<select id="gender" name="gender">
+			<option>ALL</option>
+			<option>Female</option>
+			<option>Male</option>
+		</select>
+		<button id="search">Search</button>
+
+		<div>
+			<table id="result">
+			</table>
+		</div>
+	</body>
+
+	<style>
+		h1{
+			background-color: #C0C0C0;
+		}
+
+		#result {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		#result td, #result th {
+			border: 1px solid #ddd;
+			padding: 8px;
+
+		}
+
+		#result tr:nth-child(even){background-color: #f2f2f2;}
+
+		#result tr:hover {background-color: #ddd;}
+
+		#result th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #87CEFA;
+			color: white;
+		}
+	</style>
+</html>
