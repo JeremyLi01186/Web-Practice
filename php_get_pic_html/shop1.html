@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jewelry Store</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="/scripts1/bootstrap.js" type="text/javascript"></script>
+	<script src="/scripts1/filterJewelry.js" type="text/javascript"></script>
+	
+	<script src="/scripts1/script.js" type="text/javascript"></script>
+
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="/stylesheets1/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets1/style1.css">
+	<meta charset="utf-8">
+	<meta name="keywords" content="online, Jewelry, store">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+<!-- ********* page header 
+
+	<nav>
+		<ul class="menu">
+			<li id="homeBtn" class="btn btn-danger">home</li>
+			<li id="addJewelryBtn" class="admin btn btn-danger">Add Jewelrys</li>
+			
+		</ul>
+		<div class="login">
+			<span class="btn btn-danger material-icons" data-toggle="collapse" data-target="#filter-panel">search</span>
+			<span></span>
+			
+		</div>
+
+
+	</nav>******** -->	
+
+<!-- *********** main page ********** -->
+	<section class="main">
+
+		<!-- *********** filter Jewelry module ********** -->
+		
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="form-inline">
+						<span>Search by Jewelry Name:</span>
+						<input id="search-name" type="text" class="form-control input-m" style="width: 300px">
+						<span style="width: 50px"></span>
+						<span>Search by Category:</span>
+						<select id="search-category" class="form-control">
+							<option value = ''> </option>
+							<option value = 'Ring'>ring</option>
+							<option value = 'Diamond'>necklace</option>
+							<option value = 'Engagement'>earrings</option>
+							
+						</select>                                
+						<span style="width: 30px"></span>
+						<span id="searchBtn" class="btn btn-default material-icons">search</span>
+					</div>
+				</div>
+			</div>
+		</div> 
+
+		<!-- *********** home page for listing Jewelrys ********** -->
+		<div class="home">
+			<p class="error alert-danger">Error: </p><hr/>
+			<div id="listing">	
+			</div>
+			<hr/>
+			<div id="paging">	
+			</div>
+		</div>
+
+	</section>
+
+
+</body>
+</html>
